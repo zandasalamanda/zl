@@ -1,0 +1,245 @@
+/*
+ Names: Joshua Sanchez, Zander Leon
+ Haunted House CYOA
+ 10/17/24
+ Extra: Ascii art for each decision point.
+ 
+*/
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+// Function prototypes
+void displayHauntedHouse();
+void firstDecision();
+void secondDecision();
+void thirdDecision();
+void fourthDecision();
+void fifthDecision();
+
+// Function to display the haunted house ASCII art
+void displayHauntedHouse() {
+    cout << R"(
+                                    _____
+                               _.-""     ""-._
+                             .'               '.
+                . . . . .  .'                   '.
+                !-!-!-!-! /   .-..                \
+                !_!,!_!_!/    |__H _    .-\_)`-.   \
+              ,/`,/'_`\,`\,  [____|_]  /.-. .-,_\   ;
+            ,/',/'/_|_\`\,`\,|=   |=|      \(       ;
+          ,/' |/ ||"""|| \| `\, = | |       `       |
+          |   #| ||___|| | #  |=  | |               |
+        ,/' #  | [_____] |   #`\, |=|               ;
+      ,/',-----'      =  '-----,`\--'---,/\,--,    /
+     `""|   .;;;,=      ,;;;,   |#  # ,//  \\,'\, /
+        | =//___\\ =   //___\\ =| # ,//',;;,'\\,#\,
+        |  ||   ||     ||   ||  |#,//' //||\\ '\\,`\,
+        |  ||   ||     ||   ||  |-|/| ||_||_|| |\|_ _|
+        |  ||   ||   = ||   ||  |=  | |.----.|=|___]
+        |= ||___|| =   ||___|| =|  =| ||    || | ||
+        | [_______]   [_______] |--.| ||____|| | ||
+        ;_______=______=_____ __;   |[________]| ||
+      ,/'#    #   #      #       #  '----------''\|
+    ,/'    #        #       #         #     #   # '\,
+  ,/'___#____#__#_____#___#_______#_______#____#___#'\,
+  `""[____________________________________________]|""`
+     _[_|   .-----.  =-       ___________    ||_]_||
+    |  _| .",-"|"-,',   () = |.--..-..--.| = |_  |||
+    |_/ |/ /_\_|_/_\ \ /__\  ||__||_||__||   | \_|\\
+    (_) || .-------. | |  |  |.--..-..--.|  =| (_) ||
+    / \ || |       | | |()|  ||__||_||__||   | / \ ||
+    \_/ || '-------' |  )(   |___________|   | \_/ ||
+    (_) ||.---------.|  \/   |.---------.|=  | (_) ||
+    / \ |||   ___   ||    =  ||         ||   | / \ ||
+    \_/ |||  {___}  ||       ||         ||   | \_/ ||
+    (_) |||  ((_))  || -=   =||_________|| = |_(_)_//
+    / \ |||   '-'   ||   _ .-'-----------'-. | / \__\
+    \_/_|||       ()||  [_]"""""""""""""""""[_]\_/\\\\
+   [ __ ]||         || =| |==.==.==.==.==.==| |__]|||||
+   j|  ||||         ||  | |  |  |  |  |  |  | |  |====|
+   g|__|||;).       ||--|_|=='=='=='=='=='==|_|  ||||||
+  _s____/`---`\ ____||_.____._____._____.____.|__|////
+ |     |  9.9  |=====' |    |    /  \    \   |    |-'
+ '------\ www /---'----'----'---'----'---'---'----'
+         `---'
+
+------------------------------------------------
+
+    )" << endl;
+}
+
+// Function for the first decision point
+
+
+void firstDecision() {
+    int choice;
+    cout << "You stand before a spooky haunted house. Do you want to enter? (1: Yes, 2: No): ";
+    cin >> choice;
+
+    if (choice == 1) {
+        cout << "You bravely step inside the haunted house." << endl;
+        secondDecision();
+    } else {
+        cout << "You decide to walk away. The adventure ends here." << endl;
+    }
+}
+
+// Function for the second decision point
+void secondDecision() {
+    int choice;
+    cout << "The door brings you into a dark room, you see two more large doors - which one do you enter? The green one with a zig-zag design (1) or the purple one with a spiral design? (2)? ";
+        cout << R"(
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡀⠀⠀⠀⢀⣀⡠⠤⠴⠚⣿⠃
+⠀⠸⣿⡭⣭⣿⣽⣿⣿⣿⣿⣿⣿⣿⣽⣿⡿⠓⠚⠉⣉⣀⣤⡤⣴⠀⣿⠀
+⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⢰⠞⢩⠀⢻⡏⠀⡏⠀⣿⠄
+⠀⢠⣟⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⢸⠀⢸⠀⢸⡇⠀⠃⠀⣿⠂
+⠀⢘⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⢸⠀⢸⠀⢸⡇⠀⡇⠀⣿⡇
+⠀⠈⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⢸⠀⢸⠀⢸⡇⠀⣷⠀⣿⡇
+⠀⣠⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⢸⠀⢸⠀⢸⡇⠀⣿⣼⣿⡇
+⠀⡃⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠘⠛⠛⠒⠛⠓⠛⠛⣿⣿⡇
+⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⢰⠦⢠⠀⢤⣤⣤⣄⠋⣿⡇
+⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⢸⠀⢸⠀⢸⡇⠈⣿⠀⣿⡇
+⠀⢸⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⢸⠀⢸⠀⢸⡇⠀⣿⠀⣿⡇
+⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⢸⣄⢸⠠⣼⡇⠀⣿⠀⣿⡇
+⠀⣸⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⠉⠉⠀⠛⠚⠯⠿⠀⣿⡇
+⠠⢿⣿⣷⣶⣶⣶⠶⢶⡶⢶⣶⣶⣶⣶⢿⣶⣤⣄⣀⣀⠀⠀⠀⢨⠀⣿⡇
+⠀⠀⠀⠈⠀⠐⠒⠒⠀⠀⠀⠘⠁⠈⠀⠀⠀⠀⠉⠉⢛⠉⠑⠒⠠⠤⢿⠇
+
+    )" << endl;
+    cin >> choice;
+
+    if (choice == 1) {
+        thirdDecision();
+    } else {
+        fourthDecision();
+    }
+}
+
+// Function for the third decision point (going upstairs)
+void thirdDecision() {
+    int action;
+    cout << "You enter the green door and fall into darkness! What do you do? (1: Run, 2: Talk):";
+     cout << R"(
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⡟⠁⣿⣿⠎⢻⣿⣿⣿⣿⣿⣿⠁⢿⣿⠇⢹⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣷⣾⣷⣶⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+    )" << endl;
+    cin >> action;
+
+    if (action == 1) {
+        cout << "You run, hit a wall, pass out, and nobody ever hears from you again." << endl;
+    } else {
+        cout << "'Hello?' you say. Nothing responds. Suddenly, you the door closes behind you. The breeze from the slam almost knocks you over by itself. Footsteps...everywhere...who are they? All of a sudden, it's all...gone." << endl;
+          cout << R"(
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⡆
+⠀⠀⠀⠀⠀⢀⣶⣆⢀⠔⠁⠀⣷
+⠀⠀⠀⠀⠀⠚⣿⣿⣷⡄⠀⠀⢸
+⠀⠀⠀⠀⠀⣠⣺⣿⣿⡇⠀⠀⠸
+⠀⠀⠀⠀⡸⣿⣿⣿⣿⡇⠀⠀⠀
+⠀⠀⠀⡔⠁⢸⣿⣿⣿⣿⠀⠀⠀
+⠀⠀⠌⠀⠀⠀⣿⣿⣿⣿⠀⠀⠀
+⠀⡌⠀⠀⠀⠀⢸⣿⣿⣿⡇⠀⠀
+⠈⠀⠀⠀⠀⠀⢸⣿⣿⣿⡇⠀⠀
+⠀⠀⠀⠀⠀⠀⣾⣿⣿⣿⣷⠀⠀
+⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣷⣄
+⠀⠀⠀⠀⠀⠀⠛⠛⠛⠛⠛⠛⠉
+    "Bad choice."
+    )" << endl;
+    }
+}
+
+// Function for the fourth decision point (opening the door)
+void fourthDecision() {
+    int action;
+    cout << "You open the door and find a treasure chest! What do you do? (1: Open it, 2: Leave it): ";
+    cin >> action;
+
+    switch (action) {
+        case 1:
+            cout << "You open the chest and find gold! You are now rich!" << endl;
+             cout << R"(
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/______/_
+*******************************************************************************
+    )" << endl;
+            fifthDecision();
+            break;
+        case 2:
+            cout << "You leave the chest alone and exit the house safely." << endl;
+            break;
+        default:
+            cout << "Invalid choice. The adventure ends here." << endl;
+            break;
+    }
+}
+
+// Function for the fifth decision point (after finding the treasure)
+void fifthDecision() {
+    int choice;
+    cout << "With your newfound wealth, you can either donate to the local orphanage (1) or keep it all for yourself (2): ";
+    cin >> choice;
+
+    if (choice == 1) {
+        cout << "You generously donate the treasure. The children are grateful, and you feel fulfilled!" << endl;
+ cout << R"(
+            
+           .===.
+          / ,,, \        .===.         
+         ( /6.6\ )      ////\\\       .===.
+         )(  V  )(     ((/6.6\))     /_____\__     .===.
+        ( ,'---', )    )(  V  )(    `\/6.6\/--`   ////\\\
+         / (\-/) \    ((()---()))    (  V  )      \/6.6\/
+        /_ /o o\ _\    /  `@`  \     ,'---',      (  V  )
+        | _\ Y /_ |   /\/     \/\   /   _   \     ,'---',
+        \(_ `~` _)/   \ |     | /  /_/ (_) \_\   /       \
+         / /   \ \     \|     |/   \ | (_) | /  /_/     \_\      
+        / ()/^\() \     |_____|     \|_____|/    \|     |/
+       /. . . . . .\    |__|__|      |  |  |     (|_____|)
+       `"`"|`|`|"`"`     | | |       |  |  |      |__|__|
+           |_|_|         |_|_|       \__|__/       |_|_|
+          _|_|_|_       _|_|_|_      _|_|_|_      _|_|_|_
+         (___|___)     (___|___)    (___|___)    (___|___)
+            
+    )" << endl;
+    } else {
+        cout << "You keep the treasure. However, you find yourself lonely, as wealth cannot buy true happiness." << endl;
+    }
+}
+
+// Main function to start the game
+int main() {
+    displayHauntedHouse();
+    firstDecision();
+    return 0;
+}   // "Run, before I make you meet jah!" The ghost turns out to be friendly! You make a new friend and share stories.
