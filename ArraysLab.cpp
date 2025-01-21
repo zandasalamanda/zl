@@ -1,3 +1,10 @@
+/*
+Zander
+1/21/2025
+Arrays Lab
+Made them all seperate functions
+*/
+
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
